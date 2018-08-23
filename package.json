@@ -22,5 +22,9 @@
   "bugs": {
     "url": "https://github.com/EpicKiwi/ada-tsl2561/issues"
   },
-  "homepage": "https://github.com/EpicKiwi/ada-tsl2561#readme"
+  "homepage": "https://github.com/EpicKiwi/ada-tsl2561#readme",
+  "dependencies": {
+    "i2c-bus": "^4.0.1",
+    "ow": "latest"
+  }
 }
