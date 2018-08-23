@@ -18,7 +18,7 @@ npm install ada-tsl2561
 The module contains the class `Tsl2561` and all the asynchroneous methods are native promise based
 
 ```javascript
-const Tsl2561 = require("../lib/index")
+const Tsl2561 = require("ada-tsl2561")
 
 let sensor = new Tsl2561()
 
