@@ -1,14 +1,14 @@
 {
-  "name": "ada-tsl2561",
+  "name": "ada-tsl2561-ts",
   "version": "1.0.0",
-  "description": "Binding of the Adafruit tsl2561 script for the light sensor",
+  "description": "Binding of the Adafruit tsl2561 script for the light sensor with type declarations",
   "main": "lib/index.js",
   "scripts": {
     "test": "echo \"Error: no test specified\" && exit 1"
   },
   "repository": {
     "type": "git",
-    "url": "git+https://github.com/EpicKiwi/ada-tsl2561.git"
+    "url": "git+https://github.com/b0czek/ada-tsl2561-ts.git"
   },
   "keywords": [
     "adafruit",
@@ -20,11 +20,16 @@
   "author": "EpicKiwi <me@epickiwi.fr>",
   "license": "MIT",
   "bugs": {
-    "url": "https://github.com/EpicKiwi/ada-tsl2561/issues"
+    "url": "https://github.com/b0czek/ada-tsl2561-ts/issues"
   },
-  "homepage": "https://github.com/EpicKiwi/ada-tsl2561#readme",
+  "homepage": "https://github.com/b0czek/ada-tsl2561-ts#readme",
   "dependencies": {
-    "i2c-bus": "^4.0.1",
-    "ow": "latest"
-  }
+    "i2c-bus": "^4.0.1"
+  },
+  "types": "index.d.ts",
+  "files": [
+    "index.d.ts",
+    "lib/index.js",
+    "lib/Tsl2561.js"
+  ]
 }

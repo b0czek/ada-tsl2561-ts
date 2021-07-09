@@ -1,8 +1,8 @@
 # TSL2561
 
-Binding of the [Adafruit TSL2561 script](https://github.com/adafruit/Adafruit_CircuitPython_TSL2561) for the light sensor
+Binding of the [Adafruit TSL2561 script](https://github.com/adafruit/Adafruit_CircuitPython_TSL2561) for the light sensor with type declarations added
 
-TSL3561 is a digital light sensor sold by [Adafruit](https://www.adafruit.com/product/439).
+TSL2561 is a digital light sensor sold by [Adafruit](https://www.adafruit.com/product/439).
 This module is a binding of the script published by Adafruit in Python in Javascript.
 
 ## Installation
@@ -10,7 +10,7 @@ This module is a binding of the script published by Adafruit in Python in Javasc
 Just install the npm package
 
 ```
-npm install ada-tsl2561
+npm install ada-tsl2561-ts
 ```
 
 ## Usage
@@ -18,21 +18,22 @@ npm install ada-tsl2561
 The module contains the class `Tsl2561` and all the asynchroneous methods are native promise based
 
 ```javascript
-const Tsl2561 = require("ada-tsl2561")
+const Tsl2561 = require("ada-tsl2561");
 
-let sensor = new Tsl2561()
+let sensor = new Tsl2561();
 
-await sensor.init(1)
+await sensor.init(1);
 
-let enabled = await sensor.isEnabled()
-if(!enabled)
-    await sensor.enable()
+let enabled = await sensor.isEnabled();
+if (!enabled) await sensor.enable();
 
-let broadband = await sensor.getBroadband()
-let infrared = await sensor.getInfrared()
-let lux = await sensor.getLux()
+let broadband = await sensor.getBroadband();
+let infrared = await sensor.getInfrared();
+let lux = await sensor.getLux();
 
-console.log(`Measure : Broadband ${broadband}, Infrared ${infrared}, Lux ${lux}`)
+console.log(
+    `Measure : Broadband ${broadband}, Infrared ${infrared}, Lux ${lux}`
+);
 ```
 
 ### API
@@ -45,8 +46,8 @@ The main class of the module representing a sensor
 
 Initialize the i2c bus and set the sensor address
 
-* busNumber : The i2c bus number to use
-* address : The address of the sensor (default 0x39)
+-   busNumber : The i2c bus number to use
+-   address : The address of the sensor (default 0x39)
 
 ##### free()
 
@@ -90,30 +91,30 @@ Get the infrared channel measure
 
 Get the current gain of the sensor
 
-* 0 : 1x
-* 1 : 16x
+-   0 : 1x
+-   1 : 16x
 
 ##### setGain(newGain)
 
 Set the gain of the sensor
 
-* 0 : 1x
-* 1 : 16x
+-   0 : 1x
+-   1 : 16x
 
 ##### getIntegrationTime()
 
 Get the current integration time of the sensor
 
-*  0 : 13.7ms
-*  1 : 101ms
-*  2 : 402ms
-*  3 : manual
+-   0 : 13.7ms
+-   1 : 101ms
+-   2 : 402ms
+-   3 : manual
 
 ##### setIntegrationTime(newIntegrationTime)
 
 Set the integration time of the sensor
 
-*  0 : 13.7ms
-*  1 : 101ms
-*  2 : 402ms
-*  3 : manual
+-   0 : 13.7ms
+-   1 : 101ms
+-   2 : 402ms
+-   3 : manual
