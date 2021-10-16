@@ -1,6 +1,6 @@
 {
   "name": "ada-tsl2561-ts",
-  "version": "1.0.0",
+  "version": "1.0.1",
   "description": "Binding of the Adafruit tsl2561 script for the light sensor with type declarations",
   "main": "lib/index.js",
   "scripts": {
